@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Refresh and Navigate",
+    "version": "1.0",
+    "description": "Automatically refreshes or navigates the page at random intervals",
+    "permissions": ["storage","scripting","tabs"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "48": "icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ]
+}

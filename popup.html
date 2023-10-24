@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            width: 300px;
+        }
+    </style>
+</head>
+<body class="p-4 bg-white text-gray-900">
+    <div class="mb-4">
+        <label for="minInterval" class="block text-sm font-medium text-gray-700 mb-1">Min Interval (seconds):</label>
+        <input type="number" id="minInterval" min="1" value="5" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+    </div>
+    <div class="mb-4">
+        <label for="maxInterval" class="block text-sm font-medium text-gray-700 mb-1">Max Interval (seconds):</label>
+        <input type="number" id="maxInterval" min="1" value="30" class="mt-1 block w-full border border-gray-300 rounded-md p-2">
+    </div>
+    <div class="mb-4">
+        <label for="selectors" class="block text-sm font-medium text-gray-700 mb-1">Selectors (one per line):</label>
+        <textarea id="selectors" class="mt-1 block w-full border border-gray-300 rounded-md p-2" rows="5" placeholder=".class or #id"></textarea>
+    </div>
+    <div class="flex gap-4">
+        <button id="toggle" class="flex-1 p-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition duration-200 ease-in-out">Toggle On/Off</button>
+        <button id="save" class="flex-1 p-2 bg-green-500 text-white rounded hover:bg-green-700 transition duration-200 ease-in-out">Save</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
